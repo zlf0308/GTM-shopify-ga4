@@ -1,4 +1,5 @@
 //1. click “Add new snippet” and name it “product-datalayer” and CREATE.
+// product-datalayer
 <script type="text/javascript">
   window.dataLayer = window.dataLayer || [];
 
