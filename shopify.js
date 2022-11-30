@@ -41,11 +41,8 @@
 <script>    
 	window.dataLayer = window.dataLayer || [];                                            
 	var shipping_price = '{{shipping_price | money_without_currency }}';
-	shipping_price  = shipping_price.replace(",", ".");
 	var total_price = '{{total_price | money_without_currency }}';
-	total_price  = total_price.replace(",", ".");
 	var tax_price = '{{tax_price | money_without_currency }}';
-	tax_price  = tax_price.replace(",", ".");
 	var orderItemsName = []            
 	var orderItemsPrice = []
 	var orderItemsQuantity = []
