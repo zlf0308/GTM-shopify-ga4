@@ -61,7 +61,7 @@
       window.dataLayer.push({
 		'page_type': 'purchase',
 		'event': 'gary_purchase',
-		'currency': "{{ shop.currency }}",
+		'currency': "{{ currency }}",
 		'totalValue': total_price,
 		'shipping': shipping_price,
 		'tax': tax_price,
