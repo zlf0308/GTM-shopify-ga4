@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2023-01-04 01:49:24",
+    "exportTime": "2023-01-04 03:18:00",
     "containerVersion": {
         "path": "accounts/6067886709/containers/99691434/versions/0",
         "accountId": "6067886709",
@@ -105,7 +105,7 @@
                                     {
                                         "type": "TEMPLATE",
                                         "key": "value",
-                                        "value": "{{D-Currency}}"
+                                        "value": "{{D- Order Currency}}"
                                     }
                                 ]
                             },
@@ -120,7 +120,7 @@
                                     {
                                         "type": "TEMPLATE",
                                         "key": "value",
-                                        "value": "{{D-Transaction Id}}"
+                                        "value": "{{D-Order Transaction Id}}"
                                     }
                                 ]
                             },
@@ -138,6 +138,36 @@
                                         "value": "{{D-Order Value}}"
                                     }
                                 ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "shipping"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{D-Order Shipping}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "tax"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{D-Order Tax}}"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -147,7 +177,7 @@
                         "value": "GA4 - All Pages"
                     }
                 ],
-                "fingerprint": "1672796923604",
+                "fingerprint": "1672802241174",
                 "firingTriggerId": [
                     "15"
                 ],
@@ -471,7 +501,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "orderId",
-                        "value": "{{D-Transaction Id}}"
+                        "value": "{{D-Order Transaction Id}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -486,7 +516,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "conversionValue",
-                        "value": "{{D-Order Value}}"
+                        "value": "{{D-Order Total Value}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -506,7 +536,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "currencyCode",
-                        "value": "{{D-Currency}}"
+                        "value": "{{D- Order Currency}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -519,7 +549,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1672796923601",
+                "fingerprint": "1672802266154",
                 "firingTriggerId": [
                     "15"
                 ],
@@ -740,7 +770,7 @@
                 "accountId": "6067886709",
                 "containerId": "99691434",
                 "variableId": "36",
-                "name": "D-Currency",
+                "name": "D- Order Currency",
                 "type": "v",
                 "parameter": [
                     {
@@ -759,7 +789,7 @@
                         "value": "currency"
                     }
                 ],
-                "fingerprint": "1672796935552",
+                "fingerprint": "1672801950917",
                 "parentFolderId": "3",
                 "formatValue": {}
             },
@@ -767,7 +797,7 @@
                 "accountId": "6067886709",
                 "containerId": "99691434",
                 "variableId": "37",
-                "name": "D-Transaction Id",
+                "name": "D-Order Transaction Id",
                 "type": "v",
                 "parameter": [
                     {
@@ -786,8 +816,86 @@
                         "value": "transaction_id"
                     }
                 ],
-                "fingerprint": "1672796935553",
+                "fingerprint": "1672801962109",
                 "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "38",
+                "name": "D-Order Total Value",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "totalValue"
+                    }
+                ],
+                "fingerprint": "1672801906459",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "39",
+                "name": "D-Order Shipping",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "shipping"
+                    }
+                ],
+                "fingerprint": "1672801939409",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "40",
+                "name": "D-Order Tax",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "tax"
+                    }
+                ],
+                "fingerprint": "1672801983057",
                 "formatValue": {}
             }
         ],
@@ -838,7 +946,7 @@
                 "name": "Click Text"
             }
         ],
-        "fingerprint": "1672796964554",
+        "fingerprint": "1672802279995",
         "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6067886709/containers/99691434/versions/0?apiLink=version"
     }
 }
