@@ -1,4 +1,3 @@
-//1. setting - Checkout - Purchase
    
 {% if first_time_accessed %}
   <script>
