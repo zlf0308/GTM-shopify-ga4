@@ -1,29 +1,47 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2022-07-28 08:51:25",
+    "exportTime": "2023-01-04 01:49:24",
     "containerVersion": {
-        "path": "accounts/6051506279/containers/90057292/versions/0",
-        "accountId": "6051506279",
-        "containerId": "90057292",
+        "path": "accounts/6067886709/containers/99691434/versions/0",
+        "accountId": "6067886709",
+        "containerId": "99691434",
         "containerVersionId": "0",
         "container": {
-            "path": "accounts/6051506279/containers/90057292",
-            "accountId": "6051506279",
-            "containerId": "90057292",
-            "name": "test.com",
-            "publicId": "GTM-test",
+            "path": "accounts/6067886709/containers/99691434",
+            "accountId": "6067886709",
+            "containerId": "99691434",
+            "name": "garyzlf.myshopify.com",
+            "publicId": "GTM-T3JL6DG",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1658288440515",
-            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6051506279/containers/90057292/workspaces?apiLink=container"
+            "fingerprint": "1672795540189",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6067886709/containers/99691434/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true
+            },
+            "tagIds": [
+                "GTM-T3JL6DG"
+            ]
         },
         "tag": [
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "tagId": "15",
-                "name": "GA4.01 - All Pages",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "11",
+                "name": "GA4 - All Pages",
                 "type": "gaawc",
                 "parameter": [
                     {
@@ -42,11 +60,11 @@
                         "value": "{{GA4}}"
                     }
                 ],
-                "fingerprint": "1658975170899",
+                "fingerprint": "1672796923603",
                 "firingTriggerId": [
                     "2147479553"
                 ],
-                "parentFolderId": "9",
+                "parentFolderId": "3",
                 "tagFiringOption": "ONCE_PER_EVENT",
                 "monitoringMetadata": {
                     "type": "MAP"
@@ -56,94 +74,17 @@
                 }
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "tagId": "23",
-                "name": "GA4.02 - Event - View Item",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "17",
+                "name": "GA4 - Event - Purchase",
                 "type": "gaawe",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "eventName",
-                        "value": "view_item"
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
                     },
-                    {
-                        "type": "LIST",
-                        "key": "eventParameters",
-                        "list": [
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "item_name"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - productName}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "item_id"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - productId}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "price"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - productPrice}}"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "TAG_REFERENCE",
-                        "key": "measurementId",
-                        "value": "GA4.01 - All Pages"
-                    }
-                ],
-                "fingerprint": "1658975170903",
-                "firingTriggerId": [
-                    "16"
-                ],
-                "parentFolderId": "9",
-                "tagFiringOption": "ONCE_PER_EVENT",
-                "monitoringMetadata": {
-                    "type": "MAP"
-                },
-                "consentSettings": {
-                    "consentStatus": "NOT_SET"
-                }
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "tagId": "28",
-                "name": "GA4.03 - Event - Purchase",
-                "type": "gaawe",
-                "parameter": [
                     {
                         "type": "TEMPLATE",
                         "key": "eventName",
@@ -159,12 +100,12 @@
                                     {
                                         "type": "TEMPLATE",
                                         "key": "name",
-                                        "value": "items"
+                                        "value": "currency"
                                     },
                                     {
                                         "type": "TEMPLATE",
                                         "key": "value",
-                                        "value": "{{cJS - products - purchase - GA4}}"
+                                        "value": "{{D-Currency}}"
                                     }
                                 ]
                             },
@@ -179,7 +120,7 @@
                                     {
                                         "type": "TEMPLATE",
                                         "key": "value",
-                                        "value": "{{dlv - transaction_id}}"
+                                        "value": "{{D-Transaction Id}}"
                                     }
                                 ]
                             },
@@ -194,52 +135,7 @@
                                     {
                                         "type": "TEMPLATE",
                                         "key": "value",
-                                        "value": "{{dlv - totalValue}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "tax"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - tax}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "shipping"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - shipping}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "name",
-                                        "value": "currency"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{dlv - currency}}"
+                                        "value": "{{D-Order Value}}"
                                     }
                                 ]
                             }
@@ -248,14 +144,386 @@
                     {
                         "type": "TAG_REFERENCE",
                         "key": "measurementId",
-                        "value": "GA4.01 - All Pages"
+                        "value": "GA4 - All Pages"
                     }
                 ],
-                "fingerprint": "1658975170904",
+                "fingerprint": "1672796923604",
                 "firingTriggerId": [
-                    "17"
+                    "15"
                 ],
-                "parentFolderId": "9",
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "19",
+                "name": "Ads - Remarketing",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Ads-Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1672796923599",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "22",
+                "name": "GA4 Event - add_to_cart",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "add_to_cart"
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - All Pages"
+                    }
+                ],
+                "fingerprint": "1672796923604",
+                "firingTriggerId": [
+                    "21"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "25",
+                "name": "GA4 Event - begin_checkout",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "begin_checkout"
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - All Pages"
+                    }
+                ],
+                "fingerprint": "1672796923605",
+                "firingTriggerId": [
+                    "24"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "30",
+                "name": "Conversion Linker",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableUrlPassthrough",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1672796923603",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "31",
+                "name": "Ads-Begin_Checkout",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEnhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Ads-Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "{{Ads-Begin Checkout Label}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1672796923602",
+                "firingTriggerId": [
+                    "24"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "32",
+                "name": "Ads-Add to cart",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEnhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Ads-Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "{{Ads-Add To Cart Label}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1672796923602",
+                "firingTriggerId": [
+                    "21"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "tagId": "33",
+                "name": "Ads- Purchase",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "orderId",
+                        "value": "{{D-Transaction Id}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEnhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "{{D-Order Value}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Ads-Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "{{D-Currency}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "{{Ads-Purchase Label}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1672796923601",
+                "firingTriggerId": [
+                    "15"
+                ],
+                "parentFolderId": "3",
                 "tagFiringOption": "ONCE_PER_EVENT",
                 "monitoringMetadata": {
                     "type": "MAP"
@@ -267,35 +535,9 @@
         ],
         "trigger": [
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "triggerId": "16",
-                "name": "cEvent - productDetail",
-                "type": "CUSTOM_EVENT",
-                "customEventFilter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{_event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "gary_productDetail"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1658989847768",
-                "parentFolderId": "9"
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "triggerId": "17",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "triggerId": "15",
                 "name": "cEvent - purchase",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -310,49 +552,18 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "gary_purchase"
+                                "value": "newPurchase"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1658989790921",
-                "parentFolderId": "9"
+                "fingerprint": "1672796650559",
+                "parentFolderId": "3"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "triggerId": "18",
-                "name": "buy it now",
-                "type": "CLICK",
-                "filter": [
-                    {
-                        "type": "MATCH_REGEX",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{Click Text}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "buy it now"
-                            },
-                            {
-                                "type": "BOOLEAN",
-                                "key": "ignore_case",
-                                "value": "true"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1658998226169",
-                "parentFolderId": "9"
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "triggerId": "19",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "triggerId": "21",
                 "name": "Add to cart",
                 "type": "CLICK",
                 "filter": [
@@ -377,69 +588,46 @@
                         ]
                     }
                 ],
-                "fingerprint": "1658998226168",
-                "parentFolderId": "9"
+                "fingerprint": "1672795582128",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "triggerId": "24",
+                "name": "begin_checkout",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "check out"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1672795582129",
+                "parentFolderId": "3"
             }
         ],
         "variable": [
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "variableId": "10",
-                "name": "dlv - totalValue",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "totalValue"
-                    }
-                ],
-                "fingerprint": "1658975170897",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "11",
-                "name": "dlv - productName",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "productName"
-                    }
-                ],
-                "fingerprint": "1658975170897",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "12",
                 "name": "GA4",
                 "type": "c",
                 "parameter": [
@@ -449,15 +637,83 @@
                         "value": "G-test"
                     }
                 ],
-                "fingerprint": "1658975170898",
-                "parentFolderId": "9",
+                "fingerprint": "1672796935554",
+                "parentFolderId": "3",
                 "formatValue": {}
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "13",
-                "name": "dlv - shipping",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "18",
+                "name": "Ads-Conversion ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "ID"
+                    }
+                ],
+                "fingerprint": "1672796935551",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "27",
+                "name": "Ads-Purchase Label",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "label1"
+                    }
+                ],
+                "fingerprint": "1672796935552",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "28",
+                "name": "Ads-Begin Checkout Label",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "label"
+                    }
+                ],
+                "fingerprint": "1672796935550",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "29",
+                "name": "Ads-Add To Cart Label",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "label2"
+                    }
+                ],
+                "fingerprint": "1672796935549",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "35",
+                "name": "D-Order Value",
                 "type": "v",
                 "parameter": [
                     {
@@ -473,180 +729,18 @@
                     {
                         "type": "TEMPLATE",
                         "key": "name",
-                        "value": "shipping"
+                        "value": "value"
                     }
                 ],
-                "fingerprint": "1658975170898",
-                "parentFolderId": "9",
+                "fingerprint": "1672796935553",
+                "parentFolderId": "3",
                 "formatValue": {}
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "14",
-                "name": "dlv - brand",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "brand"
-                    }
-                ],
-                "fingerprint": "1658975170899",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "20",
-                "name": "dlv - tax",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "tax"
-                    }
-                ],
-                "fingerprint": "1658975170901",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "21",
-                "name": "dlv - productPrice",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "productPrice"
-                    }
-                ],
-                "fingerprint": "1658975170902",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "22",
-                "name": "dlv - productId",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "productId"
-                    }
-                ],
-                "fingerprint": "1658975170902",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "24",
-                "name": "dlv - transaction_id",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "transaction_id"
-                    }
-                ],
-                "fingerprint": "1658975170903",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "25",
-                "name": "dlv - productQuantity",
-                "type": "v",
-                "parameter": [
-                    {
-                        "type": "INTEGER",
-                        "key": "dataLayerVersion",
-                        "value": "2"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setDefaultValue",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "productQuantity"
-                    }
-                ],
-                "fingerprint": "1658975170904",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "26",
-                "name": "dlv - currency",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "36",
+                "name": "D-Currency",
                 "type": "v",
                 "parameter": [
                     {
@@ -665,93 +759,86 @@
                         "value": "currency"
                     }
                 ],
-                "fingerprint": "1658975170904",
-                "parentFolderId": "9",
+                "fingerprint": "1672796935552",
+                "parentFolderId": "3",
                 "formatValue": {}
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "27",
-                "name": "cJS - products - purchase - GA4",
-                "type": "jsm",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "variableId": "37",
+                "name": "D-Transaction Id",
+                "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\nvar isim = {{dlv - productName}};\nvar fiyat = {{dlv - productPrice}};\nvar qty = {{dlv - productQuantity}};\nvar aydi = {{dlv - productId}};\n var items = [];\n\n\nfor(i=0; i<fiyat.length; i++){\n    items.push(     \n        {\n          'item_name': isim[i],\n          'price': fiyat[i],\n          'item_id': aydi[i],\n          'quantity': qty[i]          \n        }\n      \n    );\n}\nreturn items;\n}"
-                    }
-                ],
-                "fingerprint": "1658975170905",
-                "parentFolderId": "9",
-                "formatValue": {}
-            },
-            {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "variableId": "29",
-                "name": "cJS - product - detail - GA4",
-                "type": "jsm",
-                "parameter": [
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
                     {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  var items = [];\n    items.push(\n      \n        {\n          'item_name': {{dlv - productName}}, \n          'price': {{dlv - productPrice}},\n          'item_id': {{dlv - productId}},\n          \n        }\n      \n    );\n\nreturn items\n\n}"
+                        "key": "name",
+                        "value": "transaction_id"
                     }
                 ],
-                "fingerprint": "1658975170905",
-                "parentFolderId": "9",
+                "fingerprint": "1672796935553",
+                "parentFolderId": "3",
                 "formatValue": {}
             }
         ],
         "folder": [
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
-                "folderId": "9",
+                "accountId": "6067886709",
+                "containerId": "99691434",
+                "folderId": "3",
                 "name": "GA4",
-                "fingerprint": "1658989575291"
+                "fingerprint": "1672795582120"
             }
         ],
         "builtInVariable": [
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "PAGE_URL",
                 "name": "Page URL"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "PAGE_HOSTNAME",
                 "name": "Page Hostname"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "PAGE_PATH",
                 "name": "Page Path"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "REFERRER",
                 "name": "Referrer"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "EVENT",
                 "name": "Event"
             },
             {
-                "accountId": "6051506279",
-                "containerId": "90057292",
+                "accountId": "6067886709",
+                "containerId": "99691434",
                 "type": "CLICK_TEXT",
                 "name": "Click Text"
             }
         ],
-        "fingerprint": "1658998284928",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6051506279/containers/90057292/versions/0?apiLink=version"
+        "fingerprint": "1672796964554",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6067886709/containers/99691434/versions/0?apiLink=version"
     }
 }
